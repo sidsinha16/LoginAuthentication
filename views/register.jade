@@ -1,0 +1,23 @@
+extends layout
+
+block content   
+        form(method='post' enctype='multipart/form-data' action='/users/register')
+         div.form-group
+           label(for='name') Name:
+           input#name.form-control(type='text' name='name' placeholder='Enter your Full Name' required)
+         div.form-group
+           label(for='email') EMail:
+           input#name.form-control(type='email' name='email' placeholder='Enter your Email Address')  
+         div.form-group
+            label(for='username') Username:
+            input#name.form-control(type='text' name='username' placeholder='Enter your unique username' required)
+         div.form-group
+            label(for='password') Password:
+            input#name.form-control(type='password' name='password' placeholder='Enter your password' required)
+         div.form-group
+            label(for='cpass') Confirm Password:
+            input#name.form-control(type='password' name='cpass' placeholder='Enter to Confirm Password' required) 
+         div.form-group
+            label(for='images') Profile Image:
+            input#name.form-control(type='file' name='images')
+         button.btn.btn-warning(type='submit') Register 
